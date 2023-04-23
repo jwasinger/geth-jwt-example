@@ -1,19 +1,12 @@
 version: "3.9"
 services:
   geth:
-    network_mode: "host"
     image: "jwasinger/client-go:clique2"
     ports:
-      - "8545:8545"
+      - "127.0.0.1:8545:8545"
     healthcheck:
         test: ["CMD", "curl", "-f", "http://127.0.0.1:8545"]
         interval: 1s
         timeout: 10s
         retries: 1
-    entrypoint: geth --http --http.api="eth"
-  cl-shim:
-    network_mode: "host"
-    image: "jwasinger/client-go:cl-shim"
-    depends_on:
-        geth:
-             condition: service_healthy
+    entrypoint: geth --http --http.api="eth,engine" --nodiscover --verbosity=5

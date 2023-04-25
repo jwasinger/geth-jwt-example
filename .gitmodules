@@ -4,3 +4,6 @@
 [submodule "cl-shim"]
 	path = cl-shim
 	url = https://github.com/jwasinger/go-ethereum
+[submodule "jwt-go-example"]
+	path = jwt-go-example
+	url = https://github.com/jwasinger/jwt-go-example

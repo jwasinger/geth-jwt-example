@@ -7,3 +7,6 @@
 [submodule "jwt-go-example"]
 	path = jwt-go-example
 	url = https://github.com/jwasinger/jwt-go-example
+[submodule "optimism"]
+	path = optimism
+	url = https://github.com/ethereum-optimism/optimism
